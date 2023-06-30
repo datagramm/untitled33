@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    let arrarStr = `101, 2-20, James
+    102, 10-30, John
+    104,11-40, Tom`
+    let res = arrarStr.split(/\r?\n/)
+
+    let regex = /^(([' ']+|)[0-9]+,([' ']+|)(([01]?[0-9])|(20))-[0-9]{1,2}([' ']+|))(,|)([' ']+|)((,([' ']+|)[a-zA-Z]+([' ']+|))|(,([' ']+|)[a-zA-Z]+([' ']+|)[a-zA-Z]+([' ']+|))|)$/g
+
+    let array2 = []
+    res.forEach(pacient => {
+        if (pacient.match(regex )) array2.push(pacient)
+    })
+    console.log(array2)
+
+
+
+</script>
+
+</body>
+</html>
